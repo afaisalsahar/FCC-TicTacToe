@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:800" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="app-title">Ti<i class="fa fa-times" aria-hidden="true"></i> Tac T<i class="fa fa-circle" aria-hidden="true"></i>e</h1>
+            <div class="ttt">
+                <div class="mode">
+                    <div class="top">
+                        <h1 class="title">Choose Game Mode</h1>
+                    </div>
+                    <div class="main">
+                        <span class="type" data-mode="pc">
+                            <span class="icon"><i class="fa fa-laptop" aria-hidden="true"></i></span>
+                            <span class="desc">VS. PC</span>
+                        </span>
+                        <span class="type" data-mode="p2">
+                            <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span class="desc">VS. P2</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sides">
+                    <div class="top">
+                        <h1 class="title">Choose Sides</h1>
+                    </div>
+                    <div class="main">
+                        <span class="side circle" data-side="circle"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                        <span class="side times" data-side="times"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+                <div class="dificulty">
+                    <div class="top">
+                        <h1 class="title">Choose Dificulty</h1>
+                    </div>
+                    <div class="main">
+                        <span class="level" data-level="1">
+                            <span class="icon-circle"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                            <span class="icon-times"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        </span>
+                        <span class="level" data-level="2">
+                            <span class="icon-circle"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+                            <span class="icon-times"><i class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+                        </span>
+                        <span class="level" data-level="3">
+                            <span class="icon-circle"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                            <span class="icon-times"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="game">
+                    <div class="result">
+                        <div class="draw">
+                            <span class="icon"><i class="fa fa-exchange" aria-hidden="true"></i></span>
+                            <h1 class="status">It's a tie</h1>
+                        </div>
+                        <div class="win">
+                            <span class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+                            <h1 class="status">Computer Wins</h1>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <ul class="stats">
+                            <li class="circle">
+                                <span class="icon"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                                <span class="counter">0 win</span>
+                            </li>
+                            <li class="times">
+                                <span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                <span class="counter">0 win</span>
+                            </li>
+                            <li class="draw">
+                                <span class="icon"><i class="fa fa-balance-scale" aria-hidden="true"></i></span>
+                                <span class="counter">0 draw</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main">
+                        <table class="board">
+                            <tr class="row">
+                                <td class="cell" data-index="0" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                                <td class="cell" data-index="1" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                                <td class="cell" data-index="2" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell" data-index="3" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                                <td class="cell" data-index="4" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                                <td class="cell" data-index="5" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell" data-index="6" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                                <td class="cell" data-index="7" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                                <td class="cell" data-index="8" data-checked="false">
+                                    <i class="fa" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="bottom">
+                        <div class="indicator">
+                            <span class="switch">
+                                <span class="icon times"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                <span class="icon circle"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                            </span>
+                        </div>
+                        <div class="controls">
+                            <span id="game-ref" class="button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                            <span id="game-mode">Game Mode</span>
+                            <span id="game-res" class="button"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <span class="icon">
+                    <svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M9.5,3 L8,4.5 L11.5,8 L8,11.5 L9.5,13 L14,8 L9.5,3 L9.5,3 Z M4.5,3 L0,8 L4.5,13 L6,11.5 L2.5,8 L6,4.5 L4.5,3 L4.5,3 Z"></path>
+                    </svg>
+                </span>
+                with
+                <span class="icon">
+                    <svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1">
+                        <path fill-rule="evenodd" d="M11.2,3 C10.68,2.37 9.95,2.05 9,2 C8.03,2 7.31,2.42 6.8,3 C6.29,3.58 6.02,3.92 6,4 C5.98,3.92 5.72,3.58 5.2,3 C4.68,2.42 4.03,2 3,2 C2.05,2.05 1.31,2.38 0.8,3 C0.28,3.61 0.02,4.28 0,5 C0,5.52 0.09,6.52 0.67,7.67 C1.25,8.82 3.01,10.61 6,13 C8.98,10.61 10.77,8.83 11.34,7.67 C11.91,6.51 12,5.5 12,5 C11.98,4.28 11.72,3.61 11.2,2.98 L11.2,3 Z"></path>
+                    </svg>
+                </span>
+                by <a href="https://twitter.com/afaisalsahar" target="_blank">Fay</a>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
